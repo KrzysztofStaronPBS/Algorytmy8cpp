@@ -1,3 +1,0 @@
-C:/Users/Administrator/CLionProjects/Algorytmy8cpp/cmake-build-debug/CMakeFiles/Algorytmy8cpp.dir
-C:/Users/Administrator/CLionProjects/Algorytmy8cpp/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Administrator/CLionProjects/Algorytmy8cpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
