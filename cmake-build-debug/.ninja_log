@@ -1,0 +1,10 @@
+# ninja log v5
+0	1062	7231698316250275	CMakeFiles/Algorytmy8cpp.dir/main.cpp.obj	bdef75151fb10b5f
+30	1066	7231698316290245	CMakeFiles/Algorytmy8cpp.dir/generator.cpp.obj	e2013dbda0b31c1c
+1067	1388	7231698319487096	Algorytmy8cpp.exe	c8a73eca02955776
+3	470	7231698816171486	CMakeFiles/Algorytmy8cpp.dir/main.cpp.obj	bdef75151fb10b5f
+470	575	7231698817173091	Algorytmy8cpp.exe	c8a73eca02955776
+3	592	7231699192737807	CMakeFiles/Algorytmy8cpp.dir/generator.cpp.obj	e2013dbda0b31c1c
+593	709	7231699193858259	Algorytmy8cpp.exe	c8a73eca02955776
+5	661	7231699450160935	CMakeFiles/Algorytmy8cpp.dir/generator.cpp.obj	e2013dbda0b31c1c
+661	787	7231699451374521	Algorytmy8cpp.exe	c8a73eca02955776
