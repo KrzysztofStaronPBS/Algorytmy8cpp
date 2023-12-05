@@ -1,16 +1,19 @@
-#include <string>
+#include <iostream>
 #include <fstream>
-void odczyt_z_pliku(int *arr) {
-    const std::string nazwa_pliku = "..\\liczby2000.txt";
-    std::ifstream pliczek;
-    pliczek.open(nazwa_pliku);
-    std::string linia;
-    int liczba, i = 0;
-    while(!pliczek.eof()) {
-        getline(pliczek, linia);
-        liczba = std::stoi(linia);
-        arr[i] = liczba;
-        i ++;
+
+#define MAX_ROZMIAR 2000
+
+void odczyt_z_pliku(const std::string& nazwa_pliku, int tablica[], int& rozmiar) {
+    std::ifstream pliczek(nazwa_pliku);
+
+    if (pliczek.is_open()) {
+        rozmiar = 0;
+        while (rozmiar < MAX_ROZMIAR && pliczek >> tablica[rozmiar]) {
+            rozmiar++;
+        }
+
+        pliczek.close();
+    } else {
+        std::cerr << "Nie można otworzyć pliku " << nazwa_pliku << std::endl;
     }
-    pliczek.close();
 }

@@ -1,10 +1,13 @@
 #include <iostream>
 #include "prototypy.h"
-#define TABROZ 2000
+
+#define MAX_ROZMIAR 2000
+
 int main() {
-    int tabopt[TABROZ], tabrand[TABROZ], tabpes[TABROZ];
-    odczyt_z_pliku(&tabrand[TABROZ]);
-    for(int i : tabrand) {
-    }
+    int tabrand[MAX_ROZMIAR];
+    int rozmiar_tablicy;
+
+    odczyt_z_pliku("..\\liczby2000.txt", tabrand, rozmiar_tablicy);
+
     return 0;
 }
