@@ -8,6 +8,5 @@ add_executable(Algorytmy8cpp main.cpp
         sort_przez_wstawianie.cpp
         sort_babelkowe.cpp
         mergesort.cpp
-        quicksort.cpp
         "odczyt z pliku.cpp"
         pomiar_czasu.cpp)

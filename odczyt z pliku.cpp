@@ -1,14 +1,12 @@
 #include <iostream>
 #include <fstream>
 
-#define MAX_ROZMIAR 2000
-
-void odczyt_z_pliku(const std::string& nazwa_pliku, int tablica[], int& rozmiar) {
+void odczyt_z_pliku(const std::string& nazwa_pliku, int tablica[], int& rozmiar, int rozmiartab) {
     std::ifstream pliczek(nazwa_pliku);
 
     if (pliczek.is_open()) {
         rozmiar = 0;
-        while (rozmiar < MAX_ROZMIAR && pliczek >> tablica[rozmiar]) {
+        while (rozmiar < rozmiartab && pliczek >> tablica[rozmiar]) {
             rozmiar++;
         }
 
