@@ -1,3 +1,5 @@
+// IMPLEMENTACJA MERGESORT (FUNKCJA POMOCNICZA)
+// (KOLEJNOŚĆ ROSNĄCA)
 // scalanie dwóch podtablic L oraz M w arr
 void merge(int arr[], int p, int q, int r) {
 
@@ -50,6 +52,25 @@ void merge(int arr[], int p, int q, int r) {
     }
 }
 
+// IMPLEMENTACJA MERGESORT (FUNKCJA GŁÓWNA)
+// (KOLEJNOŚĆ ROSNĄCA)
+// Podział tablic na dwie podtablice, sortowanie ich oraz scalanie
+void mergeSort(int arr[], int l, int r) {
+    if (l < r) {
+
+        // m jest punktem gdzie tablica jest dzielona na dwie podtablice
+        int m = l + (r - l) / 2;
+        // dzielenie tablicy wejściowej na dwie podtablice
+        mergeSort(arr, l, m);
+        mergeSort(arr, m + 1, r);
+
+        // Scalanie posortowanych podtablic
+        merge(arr, l, m, r);
+    }
+}
+
+// MERGESORT DLA KOLEJNOŚCI SORTOWANIA MALEJĄCEJ
+// (KOLEJNOŚĆ MALEJĄCA)
 void merge_pes(int arr[], int p, int q, int r) {
     int n1 = q - p + 1;
     int n2 = r - q;
@@ -91,31 +112,15 @@ void merge_pes(int arr[], int p, int q, int r) {
     }
 }
 
-// Podział tablic na dwie podtablice, sortowanie ich oraz scalanie
-void mergeSort(int arr[], int l, int r) {
-    if (l < r) {
-
-        // m jest punktem gdzie tablica jest dzielona na dwie podtablice
-        int m = l + (r - l) / 2;
-        // dzielenie tablicy wejściowej na dwie podtablice
-        mergeSort(arr, l, m);
-        mergeSort(arr, m + 1, r);
-
-        // Scalanie posortowanych podtablic
-        merge(arr, l, m, r);
-    }
-}
-
+// IMPLEMENTACJA MERGESORT, FUNKCJA GŁÓWNA
+// DLA KOLEJNOŚCI SORTOWANIA MALEJĄCEJ
 void mergeSort_pes(int arr[], int l, int r) {
     if (l < r) {
 
-        // m jest punktem gdzie tablica jest dzielona na dwie podtablice
         int m = l + (r - l) / 2;
-        // dzielenie tablicy wejściowej na dwie podtablice
         mergeSort_pes(arr, l, m);
         mergeSort_pes(arr, m + 1, r);
 
-        // Scalanie posortowanych podtablic
         merge_pes(arr, l, m, r);
     }
 }

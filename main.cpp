@@ -2,10 +2,9 @@
 #include "prototypy.h"
 #include <chrono>
 
-#define MAX_ROZMIAR 2000
-
 using namespace std;
 
+// tablice dla wszystkich rozmiarów zestawów danych
 int tab50[50];
 int tab100[100];
 int tab200[200];
@@ -17,17 +16,28 @@ int rozmiar_tablicy, elementy = sizeof(tab50) / sizeof(tab50[0]);
 
 int main() {
 
+    // odczyt liczb do wszystkich tablic
     odczyt_z_pliku("..\\liczby2000.txt", tab50, rozmiar_tablicy, 50);
     odczyt_z_pliku("..\\liczby2000.txt", tab100, rozmiar_tablicy, 100);
     odczyt_z_pliku("..\\liczby2000.txt", tab200, rozmiar_tablicy, 200);
     odczyt_z_pliku("..\\liczby2000.txt", tab500, rozmiar_tablicy, 500);
     odczyt_z_pliku("..\\liczby2000.txt", tab1000, rozmiar_tablicy, 1000);
     odczyt_z_pliku("..\\liczby2000.txt", tab2000, rozmiar_tablicy, 2000);
+    // reset czasu, bo wcześniej do pomiaru czasu dla
+    // pierwszego zestawu liczb doliczało poprzednie operacje
     auto start = chrono::high_resolution_clock::now();
     ios_base::sync_with_stdio(false);
     auto end = chrono::high_resolution_clock::now();
 
-
+    /*
+     * pomiar czasu
+     * ROZMIAR TABLICY
+     * ZBIÓR LOSOWY -> MALEJĄCO
+     * MALEJĄCO -> ROSNĄCO (PESYMISTYCZNY)
+     * ROSNĄCO -> ROSNĄCO (OPTYMISTYCZNY)
+     * program uruchamiam trzykrotnie dla danego sortowania
+     * następnie poniżej zmieniam wywoływane funkcje dla innego sortowania
+     */
     cout << "=== TABLICA 50 - ELEMENTOWA ===\n";
     pomiar_czasu_bubble_sort_pes(tab50);
     cout << " (charakter zbioru losowy)\n";
