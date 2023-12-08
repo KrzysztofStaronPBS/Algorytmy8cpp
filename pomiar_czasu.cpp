@@ -24,9 +24,8 @@ void pomiar_czasu_bubble_sort(int tab[]){
     // zakończenie pomiaru czasu
     auto end = chrono::high_resolution_clock::now();
     // zmienna ze zmierzonym czasem wykonywania sortowania, przechowana w postaci mikrosekund (10^-6s)
-    double time_taken = chrono::duration_cast<chrono::microseconds >(end - start).count();
+    long long time_taken = chrono::duration_cast<chrono::microseconds >(end - start).count();
     // zamiana mikrosekund na milisekundy (10^-3s)
-    time_taken *= 1e-3;
     cout << "\nCzas sortowania tablicy sortowaniem babelkowym wyniosl " << time_taken << " milisekund" << endl;
 }
 
@@ -36,8 +35,7 @@ void pomiar_czasu_bubble_sort_pes(int tab[]){
 
     sort_babelkowe_pes(tab, elementy);
     auto end = chrono::high_resolution_clock::now();
-    double time_taken = chrono::duration_cast<chrono::microseconds >(end - start).count();
-    time_taken *= 1e-3;
+    long long time_taken = chrono::duration_cast<chrono::microseconds >(end - start).count();
     cout << "\nCzas sortowania tablicy sortowaniem babelkowym wyniosl " << time_taken << " milisekund" << endl;
 }
 
@@ -47,8 +45,7 @@ void pomiar_czasu_insertion_sort(int tab[]) {
 
     sort_przez_wstawianie(tab, elementy);
     auto end = chrono::high_resolution_clock::now();
-    double time_taken = chrono::duration_cast<chrono::microseconds >(end - start).count();
-    time_taken *= 1e-3;
+    long long time_taken = chrono::duration_cast<chrono::microseconds >(end - start).count();
     cout << "\nCzas sortowania tablicy sortowaniem przez wstawianie wyniosl " << time_taken << " milisekund" << endl;
 }
 
@@ -58,8 +55,7 @@ void pomiar_czasu_insertion_sort_pes(int tab[]) {
 
     sort_przez_wstawianie_pes(tab, elementy);
     auto end = chrono::high_resolution_clock::now();
-    double time_taken = chrono::duration_cast<chrono::microseconds >(end - start).count();
-    time_taken *= 1e-3;
+    long long time_taken = chrono::duration_cast<chrono::microseconds >(end - start).count();
     cout << "\nCzas sortowania tablicy sortowaniem przez wstawianie wyniosl " << time_taken << " milisekund" << endl;
 }
 
@@ -69,8 +65,7 @@ void pomiar_czasu_merge_sort(int tab[]) {
 
     mergeSort(tab, 0, elementy - 1);
     auto end = chrono::high_resolution_clock::now();
-    double time_taken = chrono::duration_cast<chrono::microseconds >(end - start).count();
-    time_taken *= 1e-3;
+    long long time_taken = chrono::duration_cast<chrono::microseconds >(end - start).count();
     cout << "\nCzas sortowania tablicy sortowaniem przez scalanie wyniosl " << time_taken << " milisekund" << endl;
 }
 
@@ -80,7 +75,6 @@ void pomiar_czasu_merge_sort_pes(int tab[]) {
 
     mergeSort_pes(tab, 0, elementy - 1);
     auto end = chrono::high_resolution_clock::now();
-    double time_taken = chrono::duration_cast<chrono::microseconds >(end - start).count();
-    time_taken *= 1e-3;
+    long long time_taken = chrono::duration_cast<chrono::microseconds >(end - start).count();
     cout << "\nCzas sortowania tablicy sortowaniem przez scalanie wyniosl " << time_taken << " milisekund" << endl;
 }

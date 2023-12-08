@@ -22,7 +22,7 @@ void sort_przez_wstawianie_pes(int arr[], int elementy){
     for(int i = 1; i < elementy; i ++){
         tmp = arr[i];
         int j = i - 1;
-        while(j >= 0 && tmp <= arr[j]){
+        while(j >= 0 && tmp >= arr[j]){
             arr[j + 1] = arr[j];
             j --;
         }

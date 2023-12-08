@@ -9,7 +9,8 @@ void merge(int arr[], int p, int q, int r) {
     int n1 = q - p + 1;
     int n2 = r - q;
 
-    int L[n1], M[n2];
+    int* L = new int[n1];
+    int* M = new int[n2];
 
     // przepisywanie liczb z oryginalnej tablicy do podtablic
     for (int i = 0; i < n1; i++)
@@ -50,6 +51,8 @@ void merge(int arr[], int p, int q, int r) {
         j++;
         k++;
     }
+    delete[] L;
+    delete[] M;
 }
 
 // IMPLEMENTACJA MERGESORT (FUNKCJA GŁÓWNA)
@@ -75,7 +78,8 @@ void merge_pes(int arr[], int p, int q, int r) {
     int n1 = q - p + 1;
     int n2 = r - q;
 
-    int L[n1], M[n2];
+    int* L = new int[n1];
+    int* M = new int[n2];
 
     for (int i = 0; i < n1; i++)
         L[i] = arr[p + i];
@@ -110,6 +114,8 @@ void merge_pes(int arr[], int p, int q, int r) {
         j++;
         k++;
     }
+    delete[] L;
+    delete[] M;
 }
 
 // IMPLEMENTACJA MERGESORT, FUNKCJA GŁÓWNA
