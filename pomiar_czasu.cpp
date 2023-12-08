@@ -53,7 +53,7 @@ void pomiar_czasu_merge_sort(int tab[]) {
     auto start = chrono::high_resolution_clock::now();
     ios_base::sync_with_stdio(false);
 
-    sort_babelkowe(tab, elementy);
+    mergeSort(tab, 0, elementy - 1);
     auto end = chrono::high_resolution_clock::now();
     double time_taken = chrono::duration_cast<chrono::microseconds >(end - start).count();
     time_taken *= 1e-3;
@@ -64,7 +64,7 @@ void pomiar_czasu_merge_sort_pes(int tab[]) {
     auto start = chrono::high_resolution_clock::now();
     ios_base::sync_with_stdio(false);
 
-    sort_babelkowe(tab, elementy);
+    mergeSort_pes(tab, 0, elementy - 1);
     auto end = chrono::high_resolution_clock::now();
     double time_taken = chrono::duration_cast<chrono::microseconds >(end - start).count();
     time_taken *= 1e-3;
