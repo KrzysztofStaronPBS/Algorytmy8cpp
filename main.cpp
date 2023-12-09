@@ -39,6 +39,177 @@ int main() {
      * następnie poniżej zmieniam wywoływane funkcje dla innego sortowania
      */
     cout << "=== TABLICA 50 - ELEMENTOWA ===\n";
+    pomiar_czasu_insertion_sort_pes(tab50);
+    cout << " (charakter zbioru losowy)\n";
+    pomiar_czasu_insertion_sort(tab50);
+    cout << " (charakter zbioru pesymistyczny)\n";
+    pomiar_czasu_insertion_sort(tab50);
+    cout << " (charater zbioru optymistyczny)\n";
+
+    cout << "\n\n=== TABLICA 100 - ELEMENTOWA ===\n";
+    elementy = sizeof(tab100) / sizeof(tab100[0]);
+    pomiar_czasu_insertion_sort_pes(tab100);
+    cout << " (charakter zbioru losowy)\n";
+    pomiar_czasu_insertion_sort(tab100);
+    cout << " (charakter zbioru pesymistyczny)\n";
+    pomiar_czasu_insertion_sort(tab100);
+    cout << " (charater zbioru optymistyczny)\n";
+
+    cout << "\n\n=== TABLICA 200 - ELEMENTOWA ===\n";
+    elementy = sizeof(tab200) / sizeof(tab200[0]);
+    pomiar_czasu_insertion_sort_pes(tab200);
+    cout << " (charakter zbioru losowy)\n";
+    pomiar_czasu_insertion_sort(tab200);
+    cout << " (charakter zbioru pesymistyczny)\n";
+    pomiar_czasu_insertion_sort(tab200);
+    cout << " (charater zbioru optymistyczny)\n";
+
+    cout << "\n\n=== TABLICA 500 - ELEMENTOWA ===\n";
+    elementy = sizeof(tab500) / sizeof(tab500[0]);
+    pomiar_czasu_insertion_sort_pes(tab500);
+    cout << " (charakter zbioru losowy)\n";
+    pomiar_czasu_insertion_sort(tab500);
+    cout << " (charakter zbioru pesymistyczny)\n";
+    pomiar_czasu_insertion_sort(tab500);
+    cout << " (charater zbioru optymistyczny)\n";
+
+    cout << "\n\n=== TABLICA 1000 - ELEMENTOWA ===\n";
+    elementy = sizeof(tab1000) / sizeof(tab1000[0]);
+    pomiar_czasu_insertion_sort_pes(tab1000);
+    cout << " (charakter zbioru losowy)\n";
+    pomiar_czasu_insertion_sort(tab1000);
+    cout << " (charakter zbioru pesymistyczny)\n";
+    pomiar_czasu_insertion_sort(tab1000);
+    cout << " (charater zbioru optymistyczny)\n";
+
+    cout << "\n\n=== TABLICA 2000 - ELEMENTOWA ===\n";
+    elementy = sizeof(tab2000) / sizeof(tab2000[0]);
+    pomiar_czasu_insertion_sort_pes(tab2000);
+    cout << " (charakter zbioru losowy)\n";
+    pomiar_czasu_insertion_sort(tab2000);
+    cout << " (charakter zbioru pesymistyczny)\n";
+    pomiar_czasu_insertion_sort(tab2000);
+    cout << " (charater zbioru optymistyczny)\n";
+
+
+
+
+    /*
+     * SORTOWANIE BĄBELKOWE
+     *
+         cout << "=== TABLICA 50 - ELEMENTOWA ===\n";
+    pomiar_czasu_bubble_sort_pes(tab50);
+    cout << " (charakter zbioru losowy)\n";
+    pomiar_czasu_bubble_sort(tab50);
+    cout << " (charakter zbioru pesymistyczny)\n";
+    pomiar_czasu_bubble_sort(tab50);
+    cout << " (charater zbioru optymistyczny)\n";
+
+    cout << "\n\n=== TABLICA 100 - ELEMENTOWA ===\n";
+    elementy = sizeof(tab100) / sizeof(tab100[0]);
+    pomiar_czasu_bubble_sort_pes(tab100);
+    cout << " (charakter zbioru losowy)\n";
+    pomiar_czasu_bubble_sort(tab100);
+    cout << " (charakter zbioru pesymistyczny)\n";
+    pomiar_czasu_bubble_sort(tab100);
+    cout << " (charater zbioru optymistyczny)\n";
+
+    cout << "\n\n=== TABLICA 200 - ELEMENTOWA ===\n";
+    elementy = sizeof(tab200) / sizeof(tab200[0]);
+    pomiar_czasu_bubble_sort_pes(tab200);
+    cout << " (charakter zbioru losowy)\n";
+    pomiar_czasu_bubble_sort(tab200);
+    cout << " (charakter zbioru pesymistyczny)\n";
+    pomiar_czasu_bubble_sort(tab200);
+    cout << " (charater zbioru optymistyczny)\n";
+
+    cout << "\n\n=== TABLICA 500 - ELEMENTOWA ===\n";
+    elementy = sizeof(tab500) / sizeof(tab500[0]);
+    pomiar_czasu_bubble_sort_pes(tab500);
+    cout << " (charakter zbioru losowy)\n";
+    pomiar_czasu_bubble_sort(tab500);
+    cout << " (charakter zbioru pesymistyczny)\n";
+    pomiar_czasu_bubble_sort(tab500);
+    cout << " (charater zbioru optymistyczny)\n";
+
+    cout << "\n\n=== TABLICA 1000 - ELEMENTOWA ===\n";
+    elementy = sizeof(tab1000) / sizeof(tab1000[0]);
+    pomiar_czasu_bubble_sort_pes(tab1000);
+    cout << " (charakter zbioru losowy)\n";
+    pomiar_czasu_bubble_sort(tab1000);
+    cout << " (charakter zbioru pesymistyczny)\n";
+    pomiar_czasu_bubble_sort(tab1000);
+    cout << " (charater zbioru optymistyczny)\n";
+
+    cout << "\n\n=== TABLICA 2000 - ELEMENTOWA ===\n";
+    elementy = sizeof(tab2000) / sizeof(tab2000[0]);
+    pomiar_czasu_bubble_sort_pes(tab2000);
+    cout << " (charakter zbioru losowy)\n";
+    pomiar_czasu_bubble_sort(tab2000);
+    cout << " (charakter zbioru pesymistyczny)\n";
+    pomiar_czasu_bubble_sort(tab2000);
+    cout << " (charater zbioru optymistyczny)\n";
+
+
+     * SORTOWANIE PRZEZ WSTAWIANIE
+
+         cout << "=== TABLICA 50 - ELEMENTOWA ===\n";
+    pomiar_czasu_insertion_sort_pes(tab50);
+    cout << " (charakter zbioru losowy)\n";
+    pomiar_czasu_insertion_sort(tab50);
+    cout << " (charakter zbioru pesymistyczny)\n";
+    pomiar_czasu_insertion_sort(tab50);
+    cout << " (charater zbioru optymistyczny)\n";
+
+    cout << "\n\n=== TABLICA 100 - ELEMENTOWA ===\n";
+    elementy = sizeof(tab100) / sizeof(tab100[0]);
+    pomiar_czasu_insertion_sort_pes(tab100);
+    cout << " (charakter zbioru losowy)\n";
+    pomiar_czasu_insertion_sort(tab100);
+    cout << " (charakter zbioru pesymistyczny)\n";
+    pomiar_czasu_insertion_sort(tab100);
+    cout << " (charater zbioru optymistyczny)\n";
+
+    cout << "\n\n=== TABLICA 200 - ELEMENTOWA ===\n";
+    elementy = sizeof(tab200) / sizeof(tab200[0]);
+    pomiar_czasu_insertion_sort_pes(tab200);
+    cout << " (charakter zbioru losowy)\n";
+    pomiar_czasu_insertion_sort(tab200);
+    cout << " (charakter zbioru pesymistyczny)\n";
+    pomiar_czasu_insertion_sort(tab200);
+    cout << " (charater zbioru optymistyczny)\n";
+
+    cout << "\n\n=== TABLICA 500 - ELEMENTOWA ===\n";
+    elementy = sizeof(tab500) / sizeof(tab500[0]);
+    pomiar_czasu_insertion_sort_pes(tab500);
+    cout << " (charakter zbioru losowy)\n";
+    pomiar_czasu_insertion_sort(tab500);
+    cout << " (charakter zbioru pesymistyczny)\n";
+    pomiar_czasu_insertion_sort(tab500);
+    cout << " (charater zbioru optymistyczny)\n";
+
+    cout << "\n\n=== TABLICA 1000 - ELEMENTOWA ===\n";
+    elementy = sizeof(tab1000) / sizeof(tab1000[0]);
+    pomiar_czasu_insertion_sort_pes(tab1000);
+    cout << " (charakter zbioru losowy)\n";
+    pomiar_czasu_insertion_sort(tab1000);
+    cout << " (charakter zbioru pesymistyczny)\n";
+    pomiar_czasu_insertion_sort(tab1000);
+    cout << " (charater zbioru optymistyczny)\n";
+
+    cout << "\n\n=== TABLICA 2000 - ELEMENTOWA ===\n";
+    elementy = sizeof(tab2000) / sizeof(tab2000[0]);
+    pomiar_czasu_insertion_sort_pes(tab2000);
+    cout << " (charakter zbioru losowy)\n";
+    pomiar_czasu_insertion_sort(tab2000);
+    cout << " (charakter zbioru pesymistyczny)\n";
+    pomiar_czasu_insertion_sort(tab2000);
+    cout << " (charater zbioru optymistyczny)\n";
+
+
+     * SORTOWANIE PRZEZ SCALANIE
+
+    cout << "=== TABLICA 50 - ELEMENTOWA ===\n";
     pomiar_czasu_merge_sort_pes(tab50);
     cout << " (charakter zbioru losowy)\n";
     pomiar_czasu_merge_sort(tab50);
@@ -91,5 +262,7 @@ int main() {
     pomiar_czasu_merge_sort(tab2000);
     cout << " (charater zbioru optymistyczny)\n";
 
+ */
     return 0;
 }
+
